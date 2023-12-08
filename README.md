@@ -45,29 +45,20 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+## Application Design
 
-```bash
-# unit tests
-$ npm run test
+I used a monolithic approach.
 
-# e2e tests
-$ npm run test:e2e
+I used clear and consistent structure, following the Nest.js conventions and best practices. The app is divided into modules, controllers, services, and entities, each with a specific responsibility and functionality.
 
-# test coverage
-$ npm run test:cov
-```
+I used a modular structure to organize the app’s code into distinct features. Created a user module and a task module, each containing its own controllers, services and Entity.
 
-## Support
+I used DTO(Data Transfer Object) to define the shape of Data that the API endpoints expect and provide type safety and validation to the incoming data
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+I Used Passport with JWT as the authentication middleware to handle user authentication and authorization.
 
-## Stay in touch
+I used TypeORM to manage the database operations, such as creating, reading, updating, and deleting tasks.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+I used the Nest.js REST API design pattern, which means that the app exposes endpoints for each CRUD operation, following the HTTP methods and status codes conventions.
 
-## License
-
-Nest is [MIT licensed](LICENSE).
+Used Nest.js decorators to simplify the code and enhance the readability. For example, use @Module () to define a module, @Controller () to define a controller, @Injectable () to define a service, @Get () to define a GET route, @Post () to define a POST route, @UseGuards () to apply a guard, @Body () to access the request body, @Param () to access the route parameters, etc.
